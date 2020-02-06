@@ -1,0 +1,111 @@
+# Aliases in this file are bash and zsh compatible
+
+# Config alias (https://news.ycombinator.com/item?id=11070797)
+# alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# Get operating system
+platform='unknown'
+unamestr=$(uname)
+if [[ $unamestr == 'Linux' ]]; then
+  platform='linux'
+elif [[ $unamestr == 'Darwin' ]]; then
+  platform='darwin'
+fi
+
+alias copy="xclip -rmlastnl -selection clipboard"
+
+
+# PS
+alias psa="ps aux"
+alias psg="ps aux | grep "
+alias psr='ps aux | grep ruby'
+
+# Moving around
+alias cdb='cd -'
+alias cls='clear;ls'
+
+# Show human friendly numbers and colors
+alias df='df -h'
+alias du='du -h -d 2'
+
+alias grep='grep --color=auto'
+
+if [[ $platform == 'linux' ]]; then
+  alias ll='ls -alh --color=auto'
+  alias ls='ls --color=auto'
+elif [[ $platform == 'darwin' ]]; then
+  alias ll='ls -alGh'
+  alias ls='ls -Gh'
+fi
+
+# show me files matching "ls grep"
+alias lsg='ll | grep'
+
+# vim using
+mvim --version > /dev/null 2>&1
+MACVIM_INSTALLED=$?
+if [ $MACVIM_INSTALLED -eq 0 ]; then
+  alias vim="mvim -v"
+fi
+
+# mimic vim functions
+alias :q='exit'
+
+# vimrc editing
+alias ve='vim ~/.vimrc'
+
+# zsh profile editing
+alias ze='vim ~/.zshrc'
+
+# Git Aliases
+alias gs='git status'
+alias gst='git stash'
+alias gsp='git stash pop'
+alias gsa='git stash apply'
+alias gsh='git show'
+alias gi='vim .gitignore'
+alias gcm='git commit -m'
+alias ga='git add -A'
+alias grv='git remote -v'
+alias grr='git remote rm'
+alias gra='git remote add'
+alias gr='git rebase'
+alias glog='git l'
+alias gf='git fetch'
+alias gd='git diff'
+
+# Common shell functions
+alias less='less -r'
+alias tf='tail -f'
+alias l='less'
+alias lh='ls -alt | head' # see the last modified files
+alias screen='TERM=screen screen'
+alias cl='clear'
+
+# Zippin
+alias gz='tar -zcvf'
+
+#If you want your thin to listen on a port for local VM development
+#export VM_IP=10.0.0.1 <-- your vm ip
+#alias ts='thin start -a ${VM_IP:-127.0.0.1}'
+alias ms='mongrel_rails start'
+alias tfdl='tail -f log/development.log'
+alias tftl='tail -f log/test.log'
+
+alias ka9='killall -9'
+alias k9='kill -9'
+
+## Mac
+# Finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Homebrew
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+# spotify support
+alias spn='spotify next'
+alias spp='spotify prev'
+alias sps='spotify status'
+alias spa='spotify pause'
+alias spl='spotify play'

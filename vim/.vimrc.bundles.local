@@ -1,0 +1,6 @@
+Plugin 'mxw/vim-jsx'
+Plugin 'morhetz/gruvbox'
+Plugin 'joshdick/onedark.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'Xuyuanp/nerdtree-git-plugin'

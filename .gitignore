@@ -1,0 +1,73 @@
+# development
+# ----------------------------------------------------------------------------------------------
+node_modules/
+
+# OSX       taken from: https://github.com/github/gitignore/blob/master/Global/OSX.gitignore
+# ----------------------------------------------------------------------------------------------
+.DS_Store
+# Thumbnails
+._*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Windows   taken from: https://github.com/github/gitignore/blob/master/Global/Windows.gitignore
+# ----------------------------------------------------------------------------------------------
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Tags      taken from: https://github.com/github/gitignore/blob/master/Global/Tags.gitignore
+# ----------------------------------------------------------------------------------------------
+# Ignore tags created by etags, ctags, gtags (GNU global) and cscope
+TAGS
+!TAGS/
+tags
+!tags/
+.tags
+.tags1
+gtags.files
+GTAGS
+GRTAGS
+GPATH
+cscope.files
+cscope.out
+cscope.in.out
+cscope.po.out
+
+# Linux        taken from https://raw.githubusercontent.com/github/gitignore/master/Global/Linux.gitignore
+# ----------------------------------------------------------------------------------------------
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Editor       taken from: https://github.com/github/gitignore/blob/master/Global/vim.gitignore, https://raw.githubusercontent.com/github/gitignore/master/Global/VisualStudioCode.gitignore
+# ----------------------------------------------------------------------------------------------
+# Vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+custom/zsh
+vim/backups
+vim/view
+*un~
+vim/.netrwhist
+vim/tmp
+vim/spell
+vim/after/.vimrc.after
+vim/.vundles.local
+vim/.vundles.local.bak
+vim/bundle
+vim/sessions
+.netrwhist
+bin/subl
+
+# SASS
+# ----------------------------------------------------------------------------------------------
+.sass-cache
